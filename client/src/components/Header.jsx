@@ -23,7 +23,7 @@ const Header=(props)=> {
     <Box sx={{ flexGrow: 1, backgroundColor:"black" }}>
       <AppBar position="static" sx={{backgroundColor:"rgb(158,213,203)", boxShadow:" 6px 2px 15px -2px rgba(255,252,247,0.68)",height:80, display:"flex", alignItems:"space-around", justifyContent:"center"}} >
         <Toolbar>
-          <button className='logoBtn'>  <Link to="/main"><img className='logo' src="images/blog_logo.png" alt="logo" /></Link></button>
+          <button className='logoBtn'>  <Link to="/"><img className='logo' src="images/blog_logo.png" alt="logo" /></Link></button>
       
        
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -63,7 +63,7 @@ const Header=(props)=> {
                 open={Boolean(anchorEl)}
                 onClose={()=>setAnchorEl(null)}
               >
-                <MenuItem sx={{backgroundColor:"rgb(190, 190, 190)",textAlign:"center"}}><Link to="/main">Main</Link></MenuItem>
+                <MenuItem sx={{backgroundColor:"rgb(190, 190, 190)",textAlign:"center"}}><Link to="/">Main</Link></MenuItem>
                 <MenuItem sx={{backgroundColor:"rgb(190, 190, 190)",textAlign:"center"}}><Link to="/contacts">Contacts</Link></MenuItem>
                 <MenuItem sx={{backgroundColor:"rgb(190, 190, 190)",textAlign:"center"}}><Link to="/about">About</Link></MenuItem>
               
