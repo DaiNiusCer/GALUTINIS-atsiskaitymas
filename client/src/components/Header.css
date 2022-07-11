@@ -1,0 +1,38 @@
+a{
+  text-decoration: none;
+  width: 80px;
+  height: 40px;
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+}
+a:hover{
+  color:black;
+  text-align: center;
+}
+.logo{
+  height: 60px;
+  border-radius: 50%;
+}
+
+.navBtn{
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: rgb(190, 190, 190);
+  border-radius: 5px;
+  box-shadow: 6px 2px 15px -2px rgba(255,252,247,0.68);
+}
+
+.navBtnRight{
+  margin-right: 100px;
+  background-color: rgb(190, 190, 190);
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 6px 2px 15px -2px rgba(255,252,247,0.68);
+}
+
+.logoBtn{
+  border: none;
+  border-radius: 50%;
+  box-shadow: 6px 2px 15px -2px rgba(255,252,247,0.68);
+}
