@@ -2,9 +2,7 @@ import Header from "../components/Header";
 import Questioncard from "../components/Questioncard";
 import {useState,useEffect} from 'react';
 const Main = ({q}) => {
-  
   const[answers,setAnswers]=useState([])
-  
   const answersData=()=>{
     fetch('/answers')
     .then(res=>res.json())
@@ -22,10 +20,11 @@ const Main = ({q}) => {
     
     <>
 <Header/>
+
 <div className="allQuestions">
-  <h1>See all questions and answers</h1>
+<h1>See all blogs questions and answers</h1>
   {
-    q.map((item,i)=><Questioncard questions={item} answers={answers}/>)
+    q.map((item,i)=><Questioncard key={i} questions={item} answers={answers}/>)
   }
   
   

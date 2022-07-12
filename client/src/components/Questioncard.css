@@ -1,0 +1,40 @@
+.allQuestions{
+display: flex;
+flex-direction: column;
+gap:50px;
+align-items: center;
+justify-content: center;
+background-image:url('../../public/images/jungle.jpg');
+color: rgb(177, 177, 177);
+}
+
+.allquestions{
+  text-align: center;
+  border: 1px solid white;
+  width: 85%;
+  border-radius: 8px;
+  box-shadow: 6px 2px 15px -2px rgb(158,213,203);
+  background-color: rgb(229, 247, 228);
+  opacity: 0.8;
+}
+
+.questionid{
+  font-size: 25px;
+  
+}
+.question{
+  font-size: 30px;
+  font-weight: bold;
+}
+span{
+  font-size: 25px;
+}
+.answers{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h1{
+  font-size: 45px;
+
+}

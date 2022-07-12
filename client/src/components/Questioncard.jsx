@@ -7,15 +7,14 @@ const Questioncard = ({questions,answers}) => {
 
   return ( 
     <>
-    <div className="question">
-   <p>Question ID:{questions.id}</p>
-   <p>User ID:{questions.user_id}</p>
-   <p>Question: {questions.question}</p>
-   <p>Answers:
-    {
-answers.map((item)=><p>{item.question_id===questions.id}</p>)
+    <div className="allquestions">
+   <p className='questionid'>Question ID:{questions.id}</p>
+   <p className='question'>Question: {questions.question}</p>
+   <p><span>Answers:</span></p>
+   {
+answers.filter(item => item.question_id===questions.id).map((element,i) => <p className='answers' key={i}>{element.answer}
+</p>)
     }
-   </p>
     </div>
     </>
    );
