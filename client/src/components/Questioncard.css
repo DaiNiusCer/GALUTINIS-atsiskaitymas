@@ -38,3 +38,14 @@ h1{
   font-size: 45px;
 
 }
+
+.ansawerbtn{
+  margin-bottom: 25px;
+  height: 40px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.ansawerbtn:hover{
+  background-color: rgb(158,213,203) ;
+}

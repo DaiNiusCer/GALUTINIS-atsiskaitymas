@@ -7,4 +7,10 @@ router.get('/', async function(req, res){
   res.json(main)
  });
 
+ router.get('/:id', async function(req, res){
+  const main=await fetch(`http://localhost:8080/questions/${req.params.id}`).then(data=>data.json())
+  res.json(main)
+ });
+
+
  export default router

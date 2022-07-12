@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import {Routes,Route} from 'react-router-dom';
 import {useState,useEffect} from 'react';
 import './App.css';
+import Addanewanswer from './pages/Addanewanswer';
 
 function App() {
   //Visi hooks pradžia
@@ -37,7 +38,9 @@ useEffect(()=>{
 <Route path="/"element={<Main q={questions}/>}/>
 <Route path="/register"element={<Register/>}/>
 <Route path="/login"element={<Login/>}/>
-<Route path="/home"element={<Home/>}/>
+<Route path="/home"element={<Home q={questions}/>}/>
+<Route path="/answers/:id"element={<Addanewanswer/>}/>
+
 </Routes>
    </>
   );

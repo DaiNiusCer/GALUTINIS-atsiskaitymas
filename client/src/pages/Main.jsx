@@ -26,9 +26,6 @@ const Main = ({q}) => {
   {
     q.map((item,i)=><Questioncard key={i} questions={item} answers={answers}/>)
   }
-  
-  
-  
 </div>
     </>
    );
