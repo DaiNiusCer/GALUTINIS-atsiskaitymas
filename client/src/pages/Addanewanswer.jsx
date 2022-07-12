@@ -2,19 +2,23 @@ import Headerhome from "../components/Headerhome";
 import Answerscard from "../components/Answerscard";
 import {useParams} from "react-router-dom";
 import {useState,useEffect} from 'react';
-import { useNavigate } from 'react-router-dom'
+
 
 const Addanewanswer = () => {
+  
   const {id}=useParams()
-  const [answer,setAnswer]=useState(null)
-  const navigate=useNavigate()
-
-  const answersQuestionsId=()=>{
-  fetch(`/answers/${id}`)
-  .then(res=>res.json())
-  .then(data=>setAnswer(data))
-  .then(data=>console.log(data))
-  }
+  const [answer,setAnswer]=useState([])
+  
+  const answersQuestionsId = () => {
+    fetch('/answers')
+    .then(res => res.json())
+    .then(answers => {
+    const filtered = answers.filter(answer => answer.question_id === id)
+    setAnswer(filtered)
+    }
+    )
+    .catch(err => console.log(err))
+    }
   useEffect(()=>{
     answersQuestionsId()
   },[])
@@ -22,9 +26,14 @@ const Addanewanswer = () => {
   <>
   <Headerhome/>
   {
-    answer&&
-    <Answerscard data={answer}/>
+    answer.map((item,i)=><Answerscard key={i} data={item}/>)
   }
+<form>
+<h1>Enter a new answer here!</h1>
+<textarea name="" id="" cols="30" rows="10">
+</textarea>
+<input type="submit" value="Answer !" />
+</form>
   </> 
   );
 }

@@ -1,26 +1,18 @@
 import React from "react";
+import Headerhome from "../components/Headerhome";
 
 const Answerscard = ({data}) => {
+  console.log(data)
+  const{id,user_id,question_id,answer}=data
   return ( 
   <>
-  
-
-<form>
+  <div className="authanswers">
   <h1>All answers</h1>
-  {
-    data.map(item=><p>{item.answer}</p>)
-  }
-<h1>Enter a new answer here</h1>
-<textarea name="" id="" cols="30" rows="10">
-</textarea>
+  <p>{answer}</p>
+  </div>
 
-<input type="submit" value="Answer !" />
-
-
-</form>
-
-
-  </> );
+  </> 
+  );
 }
  
 export default Answerscard;

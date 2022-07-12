@@ -9,6 +9,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import {Link} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import logo from '../images/blog_logo.png'
 import "./Headerhome.css" ;
 
 const Headerhome=(props)=> {
@@ -27,7 +28,7 @@ const Headerhome=(props)=> {
     <Box sx={{ flexGrow: 1, backgroundColor:"black" }}>
       <AppBar position="static" sx={{backgroundColor:"rgb(158,213,203)", boxShadow:" 6px 2px 15px -2px rgba(255,252,247,0.68)",height:80, display:"flex", alignItems:"space-around", justifyContent:"center"}} >
         <Toolbar>
-          <button className='logoBtn'>  <Link to="/home"><img className='logo' src="images/blog_logo.png" alt="logo" /></Link></button>
+          <button className='logoBtn'>  <Link to="/home"><img className='logo' src={logo} alt="logo" /></Link></button>
       
        
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
