@@ -1,11 +1,12 @@
 import React from "react";
 import "./Formregister.css";
 
-const Login = () => {
+const Formlogin = ({loginPerson}) => {
   return ( 
     <div className="container">
       <h1>Login to use all our's features</h1>
-    <form>
+    <form onSubmit={loginPerson}>
+      
       <h3>Login form </h3>
       <label htmlFor="">Enter Your's nickname</label>
       <br />
@@ -16,9 +17,10 @@ const Login = () => {
       <input type="password" name="password" /> 
 
       <input className="submitBtn" type="submit" value="Submit" />
+    
     </form>
     </div>
    );
 }
  
-export default Login;
+export default Formlogin;

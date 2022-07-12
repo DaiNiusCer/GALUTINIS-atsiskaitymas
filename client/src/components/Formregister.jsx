@@ -1,12 +1,12 @@
 import React from "react";
 import "./Formregister.css";
 
-const Formregister = ({registerPerson}) => {
+const Formregister = ({registeredPerson}) => {
 
   return ( 
     <div className="container">
       <h1>Register to get more features</h1>
-    <form>
+    <form onSubmit={registeredPerson}>
       <h3>Registration form </h3>
       <label htmlFor="">Enter Your's nickname</label>
       <br />

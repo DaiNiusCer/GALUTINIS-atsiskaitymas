@@ -2,6 +2,7 @@ import React from 'react';
 import Main from './pages/Main';
 import Register from './pages/Register';
 import Login from './pages/Login';
+import Home from './pages/Home';
 import {Routes,Route} from 'react-router-dom';
 import {useState,useEffect} from 'react';
 import './App.css';
@@ -36,6 +37,7 @@ useEffect(()=>{
 <Route path="/"element={<Main q={questions}/>}/>
 <Route path="/register"element={<Register/>}/>
 <Route path="/login"element={<Login/>}/>
+<Route path="/home"element={<Home/>}/>
 </Routes>
    </>
   );

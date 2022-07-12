@@ -1,94 +1,85 @@
 {
   "users": [
-    { "id": "1",
-      "nickname":"FrogyX",
-      "email": "example@example.com",
-      "password": "123456"
-      
+    {
+      "nickname": "Bebras",
+      "email": "bebras@gmail.com",
+      "password": "$2b$10$YUUZ6Zt22Lh8RpBik33Qqers2sjD1y.junR24QeiHT06yXFkvvAz2",
+      "id": 1
     },
     {
-      "id": "2",
-      "nickname":"BobMarley",
-      "email": "example1@example1.com",
-      "password": "123456"
-      
-    },
-    { "id": "3",
-      "nickname":"Johny04",
-      "email": "example2@example2.com",
-      "password": "123456"
-     
+      "nickname": "Tomas",
+      "email": "tomas@gmail.com",
+      "password": "$2b$10$5W/ZLJtkXtf6ZOpb5pRWzO.xUdG3sEwKdo3tpftH49Maht.COlBx2",
+      "id": 2
     }
   ],
   "questions": [
     {
       "id": "1",
-      "user_id":"1",
+      "user_id": "1",
       "question": "What dog type you have?"
     },
     {
       "id": "2",
-      "user_id":"1",
+      "user_id": "1",
       "question": " What tall are cats?"
     },
     {
       "id": "3",
-      "user_id":"2",
+      "user_id": "2",
       "question": "How many years live horses?"
-     
     },
     {
       "id": "4",
-      "user_id":"2",
+      "user_id": "2",
       "question": "What does fox say?"
     },
     {
       "id": "5",
-      "user_id":"3",
+      "user_id": "3",
       "question": "What is yours favorite drink in summer?"
     },
     {
       "id": "6",
-      "user_id":"3",
+      "user_id": "3",
       "question": "What car you have ?"
     }
   ],
   "answers": [
     {
       "id": "1",
-      "user_id":"3",
-      "question_id":"1",
+      "user_id": "3",
+      "question_id": "1",
       "answer": "I have labrador"
     },
     {
       "id": "2",
-      "user_id":"3",
-      "question_id":"2",
+      "user_id": "3",
+      "question_id": "2",
       "answer": "They are small about 25 cm from ground"
     },
     {
       "id": "3",
-      "user_id":"2",
-      "question_id":"3",
+      "user_id": "2",
+      "question_id": "3",
       "answer": "They live around 15-20 years"
-     
     },
     {
       "id": "4",
-      "user_id":"2",
-      "question_id":"4",
+      "user_id": "2",
+      "question_id": "4",
       "answer": "Pew, pew party rock'n roll baby"
     },
     {
       "id": "5",
-      "user_id":"1",
-      "question_id":"5",
+      "user_id": "1",
+      "question_id": "5",
       "answer": "Strawberry milkshake"
     },
     {
       "id": "6",
-      "user_id":"1",
-      "question_id":"6",
+      "user_id": "1",
+      "question_id": "6",
       "answer": "Subaru Outback 2005 2.5"
     }
   ]
