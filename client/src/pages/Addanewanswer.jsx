@@ -2,6 +2,9 @@ import Headerhome from "../components/Headerhome";
 import Answerscard from "../components/Answerscard";
 import {useParams} from "react-router-dom";
 import {useState,useEffect} from 'react';
+import ReplyIcon from '@mui/icons-material/Reply';
+import { Link } from "react-router-dom";
+import './Addanewanswer.css'
 
 
 const Addanewanswer = () => {
@@ -24,16 +27,22 @@ const Addanewanswer = () => {
   },[])
   return ( 
   <>
-  <Headerhome/>
+  <Headerhome/> 
+  <h1>All answers</h1>
+  <div className="answerAndForm">
+    
   {
     answer.map((item,i)=><Answerscard key={i} data={item}/>)
   }
-<form>
-<h1>Enter a new answer here!</h1>
-<textarea name="" id="" cols="30" rows="10">
+<form className="answerForm">
+<h2>Enter a new answer here!</h2>
+<textarea name="" id="" cols="80" rows="15">
 </textarea>
-<input type="submit" value="Answer !" />
+<input className="answerBtn" type="submit" value="Answer !" />
 </form>
+
+<Link className="cardBack" to="/home">Go back<ReplyIcon></ReplyIcon></Link>
+</div>
   </> 
   );
 }

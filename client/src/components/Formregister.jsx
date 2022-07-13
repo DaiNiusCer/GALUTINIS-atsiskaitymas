@@ -6,7 +6,7 @@ const Formregister = ({registeredPerson}) => {
   return ( 
     <div className="container">
       <h1>Register to get more features</h1>
-    <form onSubmit={registeredPerson}>
+    <form className="personForm" onSubmit={registeredPerson}>
       <h3>Registration form </h3>
       <label htmlFor="">Enter Your's nickname</label>
       <br />

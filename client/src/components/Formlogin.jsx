@@ -5,7 +5,7 @@ const Formlogin = ({loginPerson}) => {
   return ( 
     <div className="container">
       <h1>Login to use all our's features</h1>
-    <form onSubmit={loginPerson}>
+    <form className="personForm" onSubmit={loginPerson}>
       
       <h3>Login form </h3>
       <label htmlFor="">Enter Your's nickname</label>

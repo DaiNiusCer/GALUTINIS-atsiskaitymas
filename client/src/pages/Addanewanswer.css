@@ -1,0 +1,60 @@
+.answerAndForm{
+  border: 2px solid black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image:url('../../public/images/jungle.jpg');
+}
+
+.answerForm{
+  width: 700px;
+  border: 2px solid black;
+  height: 500px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 8px;
+  background-color: rgb(158,213,203);
+  box-shadow: 6px 2px 15px -2px rgba(255,252,247,0.68);
+  margin-bottom: 50px;
+  background-color: rgb(229, 247, 228);
+  opacity: 0.8;
+}
+
+.answerBtn{
+  margin-top: 25px;
+  height: 40px;
+  width: 100px;
+  font-weight: bold;
+}
+.cardBack{
+  margin-top: 25px;
+  margin-bottom: 50px;
+  font-weight: bold;
+  height: 30px;
+  width: 100px;
+  background-color: grey;
+  border-radius: 3px;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.cardBack:hover{
+  background-color:rgb(158,213,203) ;
+}
+.answerBtn:hover{
+  background-color: greenyellow;
+}
+textarea{
+  background-color: rgb(170, 170, 170);
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 6px 2px 15px -2px rgba(255,252,247,0.68);
+  resize: none;
+}
+
+h4{
+  font-size: 45px;
+}
