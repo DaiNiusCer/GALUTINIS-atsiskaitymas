@@ -11,6 +11,7 @@ import Addanewanswer from './pages/Addanewanswer';
 function App() {
   //Visi hooks pradžia
   const[questions,setQuestions]=useState([])
+  const[answers,setAnswers]=useState([])
   //Visi hooks pabaiga
 
 //Questions GET pradžia
@@ -21,13 +22,20 @@ const questionsData=()=>{
 }
 //Questions GET pabaiga
 
+//Answers GET pradžia
+const answersData=()=>{
+  fetch('/answers')
+  .then(res=>res.json())
+  .then(data=>setAnswers(data))
+}
+//Answers GET pabaiga
 
 
-//useEffect questions pradžia
 useEffect(()=>{
   questionsData()
+  answersData()
 },[])
-//useEffect questions pabaiga
+
 
 
 
@@ -39,7 +47,7 @@ useEffect(()=>{
 <Route path="/register"element={<Register/>}/>
 <Route path="/login"element={<Login/>}/>
 <Route path="/home"element={<Home q={questions}/>}/>
-<Route path="/answers/:id"element={<Addanewanswer/>}/>
+<Route path="/answers/:id"element={<Addanewanswer answersData={answersData}/>}/>
 
 </Routes>
    </>

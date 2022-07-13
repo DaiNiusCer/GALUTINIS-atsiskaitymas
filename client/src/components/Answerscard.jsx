@@ -7,6 +7,9 @@ const Answerscard = ({data}) => {
   <>
   
   <div className="authanswers">
+    <p className="answerP"><span className="answerSpan">Answer ID: </span>{id}</p>
+    <p className="answerP"><span className="answerSpan">User ID: </span>{user_id}</p>
+    <p className="answerP"><span className="answerSpan">Question ID: </span>{question_id}</p>
   <h4>{answer}</h4>
   </div>
 

@@ -58,3 +58,28 @@ textarea{
 h4{
   font-size: 45px;
 }
+
+.answerP{
+  color: rgb(177,177,177);
+  font-size: 25px;
+}
+.answerSpan{
+  color: rgb(177,177,177);
+  font-weight: bold;
+}
+.authanswers{
+  margin-top: 50px;
+  width: 1000px;
+  border: 2px solid black;
+  height: 400px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 8px;
+  background-color: rgb(158,213,203);
+  box-shadow: 6px 2px 15px -2px rgba(255,252,247,0.68);
+  margin-bottom: 50px;
+  background-color: rgb(229, 247, 228);
+  opacity: 0.8;
+}

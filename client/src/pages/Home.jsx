@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const Home = ({q}) => {
   const navigate=useNavigate()
+ 
   useEffect(() => {
     const token = localStorage.getItem('yoursToken');
     fetch('/verify', {

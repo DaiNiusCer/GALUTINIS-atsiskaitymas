@@ -11,76 +11,100 @@
       "email": "tomas@gmail.com",
       "password": "$2b$10$5W/ZLJtkXtf6ZOpb5pRWzO.xUdG3sEwKdo3tpftH49Maht.COlBx2",
       "id": 2
+    },
+    {
+      "nickname": "Karosas",
+      "email": "karosas@gmail.com",
+      "password": "$2b$10$871iR1jg2808DNKMg8q0X.7QtC0.BuVTo2nQ35VOPVFstO8uoVEHe",
+      "id": 3
     }
   ],
   "questions": [
     {
-      "id": "1",
-      "user_id": "1",
+      "id": 1,
+      "user_id": 1,
       "question": "What dog type you have?"
     },
     {
-      "id": "2",
-      "user_id": "1",
+      "id": 2,
+      "user_id": 1,
       "question": " What tall are cats?"
     },
     {
-      "id": "3",
-      "user_id": "2",
+      "id": 3,
+      "user_id": 2,
       "question": "How many years live horses?"
     },
     {
-      "id": "4",
-      "user_id": "2",
+      "id": 4,
+      "user_id": 2,
       "question": "What does fox say?"
     },
     {
-      "id": "5",
-      "user_id": "3",
+      "id": 5,
+      "user_id": 3,
       "question": "What is yours favorite drink in summer?"
     },
     {
-      "id": "6",
-      "user_id": "3",
+      "id": 6,
+      "user_id": 3,
       "question": "What car you have ?"
     }
   ],
   "answers": [
     {
-      "id": "1",
-      "user_id": "3",
-      "question_id": "1",
+      "id": 1,
+      "user_id": 3,
+      "question_id": 1,
       "answer": "I have labrador"
     },
     {
-      "id": "2",
-      "user_id": "3",
-      "question_id": "2",
+      "id": 2,
+      "user_id": 3,
+      "question_id": 2,
       "answer": "They are small about 25 cm from ground"
     },
     {
-      "id": "3",
-      "user_id": "2",
-      "question_id": "3",
+      "id": 3,
+      "user_id": 2,
+      "question_id": 3,
       "answer": "They live around 15-20 years"
     },
     {
-      "id": "4",
-      "user_id": "2",
-      "question_id": "4",
+      "id": 4,
+      "user_id": 2,
+      "question_id": 4,
       "answer": "Pew, pew party rock'n roll baby"
     },
     {
-      "id": "5",
-      "user_id": "1",
-      "question_id": "5",
+      "id": 5,
+      "user_id": 1,
+      "question_id": 5,
       "answer": "Strawberry milkshake"
     },
     {
-      "id": "6",
-      "user_id": "1",
-      "question_id": "6",
+      "id": 6,
+      "user_id": 1,
+      "question_id": 6,
       "answer": "Subaru Outback 2005 2.5"
+    },
+    {
+      "user_id": 2,
+      "question_id": "1",
+      "answer": "fsdfsdfsf",
+      "id": 7
+    },
+    {
+      "user_id": 2,
+      "question_id": "4",
+      "answer": "Wtf? :D",
+      "id": 8
+    },
+    {
+      "user_id": 2,
+      "question_id": "1",
+      "answer": "pasla nx",
+      "id": 9
     }
   ]
 }

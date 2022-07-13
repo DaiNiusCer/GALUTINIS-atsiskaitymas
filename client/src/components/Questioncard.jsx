@@ -12,7 +12,7 @@ const Questioncard = ({questions,answers}) => {
    <p className='question'>Question: {questions.question}</p>
    <p><span>Answers:</span></p>
    {
-answers.filter(item => item.question_id===questions.id).map((element,i) => <p className='answers' key={i}>{element.answer}
+answers.filter(item => item.question_id==questions.id).map((element,i) => <p className='answers' key={i}>{element.answer}
 </p>)
     }
     </div>
