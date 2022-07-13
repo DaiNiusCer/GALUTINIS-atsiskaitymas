@@ -3,7 +3,7 @@ import Main from './pages/Main';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Home from './pages/Home';
-import {Routes,Route} from 'react-router-dom';
+import {Routes,Route, useNavigate} from 'react-router-dom';
 import {useState,useEffect} from 'react';
 import './App.css';
 import Addanewanswer from './pages/Addanewanswer';
@@ -12,7 +12,30 @@ function App() {
   //Visi hooks pradžia
   const[questions,setQuestions]=useState([])
   const[answers,setAnswers]=useState([])
+  const[logedIn,setLogedIn]=useState(false)
   //Visi hooks pabaiga
+ //Autorizacijos efectas
+ const navigate=useNavigate()
+  useEffect(() => {
+    const token = localStorage.getItem('yoursToken');
+    fetch('/verify', {
+    headers: {
+    'Authorization': `Bearer ${token}`
+    }
+    })
+    .then(res => res.json())
+    .then(res => {
+    if (res.err) {
+      setLogedIn(false)
+    }
+    else{
+      setLogedIn(true)
+      }
+    })
+},
+[navigate]
+)
+//Autorizacijos efectas
 
 //Questions GET pradžia
 const questionsData=()=>{

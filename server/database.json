@@ -127,7 +127,7 @@
     {
       "user_id": 2,
       "question_id": "4",
-      "answer": "Lets go for the bear",
+      "answer": "Lets go for the beer, dude",
       "id": 13
     },
     {
@@ -141,6 +141,12 @@
       "question_id": "6",
       "answer": "BMW 730",
       "id": 15
+    },
+    {
+      "user_id": 2,
+      "question_id": "1",
+      "answer": "I have a husky",
+      "id": 18
     }
   ]
 }
