@@ -17,6 +17,12 @@
       "email": "karosas@gmail.com",
       "password": "$2b$10$871iR1jg2808DNKMg8q0X.7QtC0.BuVTo2nQ35VOPVFstO8uoVEHe",
       "id": 3
+    },
+    {
+      "nickname": "Ilgas",
+      "email": "ilgas@ilgas.com",
+      "password": "$2b$10$CPWDQFUoqTZM2hO8JPx2kO89lsMeB3oRETMQTKoiMqEBy0wiCyu7m",
+      "id": 4
     }
   ],
   "questions": [
@@ -99,6 +105,42 @@
       "question_id": "1",
       "answer": "I have pitbull",
       "id": 9
+    },
+    {
+      "user_id": 4,
+      "question_id": "1",
+      "answer": "I have lessie",
+      "id": 10
+    },
+    {
+      "user_id": 2,
+      "question_id": "1",
+      "answer": "I have a hotdog",
+      "id": 11
+    },
+    {
+      "user_id": 2,
+      "question_id": "2",
+      "answer": "About 50 cm from ground",
+      "id": 12
+    },
+    {
+      "user_id": 2,
+      "question_id": "4",
+      "answer": "Lets go for the bear",
+      "id": 13
+    },
+    {
+      "user_id": 2,
+      "question_id": "5",
+      "answer": "Dark lager beer",
+      "id": 14
+    },
+    {
+      "user_id": 2,
+      "question_id": "6",
+      "answer": "BMW 730",
+      "id": 15
     }
   ]
 }

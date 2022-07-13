@@ -12,7 +12,7 @@ const Addanewanswer = ({answersData}) => {
   
   const {id}=useParams();
   const [answer,setAnswer]=useState([]);
-  
+ 
   const answersQuestionsId = () => {
     fetch('/answers')
     .then(res => res.json())
@@ -20,20 +20,19 @@ const Addanewanswer = ({answersData}) => {
     const filtered = answers.filter(answer => answer.question_id == id)
     setAnswer(filtered)
     })
-
     .catch(err => console.log(err))
     };
 
-  useEffect(()=>{
-    answersQuestionsId()
     
-  },[answersData])
+    useEffect(()=>{
+      answersQuestionsId()
+     
+    },[])
 
   const addAnswer=(e)=>{
  e.preventDefault()
  const answer=e.target.elements.answer.value
  fetch(' /answers',{
-  
   method:'POST',
   headers:{
     "Content-Type":"application/json",
@@ -47,7 +46,7 @@ const Addanewanswer = ({answersData}) => {
 })
 
 .then(()=>e.target.reset())
-.then(()=>answersData())
+.then(()=> answersQuestionsId())
 .then(() => alert('Answer added!'))
 }
 

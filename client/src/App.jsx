@@ -33,13 +33,11 @@ const answersData=()=>{
 
 useEffect(()=>{
   questionsData()
-  
-},[])
-
-useEffect(()=>{
   answersData()
   
 },[])
+
+
 
 
 
@@ -52,7 +50,7 @@ useEffect(()=>{
 <Route path="/register"element={<Register/>}/>
 <Route path="/login"element={<Login/>}/>
 <Route path="/home"element={<Home q={questions}/>}/>
-<Route path="/answers/:id"element={<Addanewanswer answersData={answersData} questionsData={questionsData}/>}/>
+<Route path="/answers/:id"element={<Addanewanswer answersData={answers} questionsData={questionsData}/>}/>
 
 </Routes>
    </>
