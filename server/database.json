@@ -90,12 +90,6 @@
     },
     {
       "user_id": 2,
-      "question_id": "1",
-      "answer": "fsdfsdfsf",
-      "id": 7
-    },
-    {
-      "user_id": 2,
       "question_id": "4",
       "answer": "Wtf? :D",
       "id": 8
@@ -103,7 +97,7 @@
     {
       "user_id": 2,
       "question_id": "1",
-      "answer": "pasla nx",
+      "answer": "I have pitbull",
       "id": 9
     }
   ]

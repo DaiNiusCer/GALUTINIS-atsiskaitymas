@@ -3,6 +3,7 @@ import Answerscard from "../components/Answerscard";
 import {useParams} from "react-router-dom";
 import {useState,useEffect} from 'react';
 import ReplyIcon from '@mui/icons-material/Reply';
+
 import { Link } from "react-router-dom";
 import './Addanewanswer.css'
 
@@ -25,7 +26,8 @@ const Addanewanswer = ({answersData}) => {
 
   useEffect(()=>{
     answersQuestionsId()
-  },[])
+    
+  },[answersData])
 
   const addAnswer=(e)=>{
  e.preventDefault()
@@ -43,8 +45,9 @@ const Addanewanswer = ({answersData}) => {
     
   })
 })
-.then(()=>answersData())
+
 .then(()=>e.target.reset())
+.then(()=>answersData())
 .then(() => alert('Answer added!'))
 }
 
@@ -60,7 +63,7 @@ const Addanewanswer = ({answersData}) => {
   }
 <form className="answerForm" onSubmit={addAnswer}>
 <h2>Enter a new answer here!</h2>
-<textarea type="text" name="answer" id="" cols="80" rows="15">
+<textarea type="text" name="answer" id="" cols="80" rows="15" required>
 </textarea>
 <input className="answerBtn" type="submit" value="Answer !" />
 </form>
