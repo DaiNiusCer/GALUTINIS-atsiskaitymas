@@ -1,0 +1,36 @@
+.questionContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image:url('../../public/images/jungle.jpg');
+}
+
+.questionForm{
+  margin-top: 100px;
+  width: 700px;
+  border: 2px solid black;
+  height: 500px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 8px;
+  background-color: rgb(158,213,203);
+  box-shadow: 6px 2px 15px -2px rgba(255,252,247,0.68);
+  margin-bottom: 50px;
+  background-color: rgb(229, 247, 228);
+  opacity: 0.8;
+}
+.cardBack{
+  margin-top: 25px;
+  margin-bottom: 50px;
+  font-weight: bold;
+  height: 30px;
+  width: 100px;
+  background-color: grey;
+  border-radius: 3px;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: center;
+}

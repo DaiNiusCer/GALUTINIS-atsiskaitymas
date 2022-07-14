@@ -9,7 +9,8 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import {Link} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import logo from '../images/blog_logo.png'
+import logo from '../images/blog_logo.png';
+import NoteAddIcon from '@mui/icons-material/NoteAdd';
 import "./Headerhome.css" ;
 
 const Headerhome=(props)=> {
@@ -34,7 +35,7 @@ const Headerhome=(props)=> {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
            
           </Typography>
-         
+          <button  className='askBtn'><Link to="/ask">Ask<NoteAddIcon/></Link></button>
         
             <div>
             <IconButton

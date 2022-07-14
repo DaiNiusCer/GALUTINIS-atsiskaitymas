@@ -36,3 +36,14 @@ a:hover{
   border-radius: 50%;
   box-shadow: 6px 2px 15px -2px rgba(255,252,247,0.68);
 }
+.askBtn{
+  margin-right: 25px;
+  background-color: rgb(190, 190, 190);
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 6px 2px 15px -2px rgba(255,252,247,0.68);
+}
+
+.askBtn:hover{
+  background-color:rgb(158,213,203) ;
+}

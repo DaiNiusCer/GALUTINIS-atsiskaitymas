@@ -7,6 +7,7 @@ import {Routes,Route, useNavigate} from 'react-router-dom';
 import {useState,useEffect} from 'react';
 import './App.css';
 import Addanewanswer from './pages/Addanewanswer';
+import Askquestion from './pages/Askquestion';
 
 function App() {
   //Visi hooks pradžia
@@ -74,6 +75,7 @@ useEffect(()=>{
 <Route path="/login"element={<Login/>}/>
 <Route path="/home"element={<Home q={questions}/>}/>
 <Route path="/answers/:id"element={<Addanewanswer answersData={answers} questionsData={questionsData}/>}/>
+<Route path="/ask"element={<Askquestion/>}/>
 
 </Routes>
    </>
