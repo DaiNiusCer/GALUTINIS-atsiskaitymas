@@ -50,6 +50,9 @@ const Addanewanswer = ({answersData}) => {
 .then(() => alert('Answer added!'))
 }
 
+
+
+
   return ( 
     
   <>

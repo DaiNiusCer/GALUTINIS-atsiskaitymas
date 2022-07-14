@@ -1,11 +1,13 @@
 import Headerhome from "../components/Headerhome";
-import { useState,useEffect } from "react";
+import {useEffect } from "react";
 import { useNavigate } from "react-router-dom"; 
 import Questionform from "../components/Questionform";
 import './Askquestion.css'
 
-const Askquestion = () => {
+const Askquestion = ({questionsData}) => {
   const navigate=useNavigate()
+  
+
   useEffect(() => {
     const token = localStorage.getItem('yoursToken');
     fetch('/verify', {
@@ -22,20 +24,36 @@ const Askquestion = () => {
     }
     )
     }, 
+ 
     [navigate])
  //Autorizacija
  
+ 
  //Klausimo POST pradžia
-const question=(e)=>{
-e.preventDefault
-console.log('clicked')
-}
+ const addQuestion=(e)=>{
+  e.preventDefault()
+  const question=e.target.elements.question.value
+  fetch(' /questions',{
+    method:'POST',
+    headers:{
+      "Content-Type":"application/json",
+      "Authorization":`Bearer ${localStorage.getItem('yoursToken')}`
+    },
+    body:JSON.stringify({
+      question:question
+      
+    })
+  })
+  
+  .then(()=>e.target.reset())
+  .then(()=> questionsData())
+  .then(() => alert('Question added!'))
+  
+ 
+ }
+ 
  //Klausimo POST pabaiga
- useEffect(()=>{
-  question()
-  
-  
-},[])
+ 
 
 
   return ( 
@@ -43,7 +61,7 @@ console.log('clicked')
     <>
     <Headerhome/>
     <h1>Ask a new question</h1>
-    <Questionform question={question}/>
+    <Questionform addQuestion={addQuestion} />
     </>
    );
 }

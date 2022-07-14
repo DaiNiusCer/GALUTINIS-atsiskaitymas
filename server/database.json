@@ -55,6 +55,16 @@
       "id": 6,
       "user_id": 3,
       "question": "What car you have ?"
+    },
+    {
+      "user_id": 2,
+      "question": "sdfsdfsdf",
+      "id": 7
+    },
+    {
+      "user_id": 2,
+      "question": "NAUJAS KLAUSIMAS BLED",
+      "id": 8
     }
   ],
   "answers": [
