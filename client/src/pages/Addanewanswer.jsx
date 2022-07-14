@@ -3,16 +3,22 @@ import Answerscard from "../components/Answerscard";
 import {useParams} from "react-router-dom";
 import {useState,useEffect} from 'react';
 import ReplyIcon from '@mui/icons-material/Reply';
-
+import { useNavigate } from "react-router-dom"; 
 import { Link } from "react-router-dom";
 import './Addanewanswer.css'
 
 
-const Addanewanswer = ({answersData}) => {
-  
+const Addanewanswer = ({answersData,user}) => {
+  const navigate=useNavigate()
   const {id}=useParams();
   const [answer,setAnswer]=useState([]);
+  const[logedIn,setLogedIn]=useState(false);
+  const[user,setUser]=useState({});
+  //Papildoma autorizacija
+
+  //Papildoma autorizacija
  
+  //Atsakymu GET pagal ID
   const answersQuestionsId = () => {
     fetch('/answers')
     .then(res => res.json())
@@ -23,13 +29,15 @@ const Addanewanswer = ({answersData}) => {
     .catch(err => console.log(err))
     };
 
-    
     useEffect(()=>{
       answersQuestionsId()
      
     },[])
+//Atsakymu GET pagal ID
 
+//Atsakymu POST
   const addAnswer=(e)=>{
+    
  e.preventDefault()
  const answer=e.target.elements.answer.value
  fetch(' /answers',{
@@ -49,9 +57,22 @@ const Addanewanswer = ({answersData}) => {
 .then(()=> answersQuestionsId())
 .then(() => alert('Answer added!'))
 }
-
-
-
+//Atsakymu POST
+//Atsakymu DELETE
+const deleteFunction=(question_id)=>{
+  fetch(`/answers/delete/${question_id}`, {
+    method: "DELETE",
+    headers:{
+      "Authorization":`Bearer ${localStorage.getItem('yoursToken')}`
+    }
+    })
+    .then(()=> answersQuestionsId())
+    .then(()=>alert("Deleted!"))
+    
+  console.log(deleteFunction)
+  
+}
+//Atsakymu DELETE
 
   return ( 
     
@@ -61,7 +82,7 @@ const Addanewanswer = ({answersData}) => {
   <div className="answerAndForm">
     
   {
-    answer.map((item,i)=><Answerscard key={i} data={item}/>)
+    answer.map((item,i)=><Answerscard key={i} data={item} deleteFunction={deleteFunction}/>)
   }
 <form className="answerForm" onSubmit={addAnswer}>
 <h2>Enter a new answer here!</h2>

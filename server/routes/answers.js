@@ -2,17 +2,23 @@ import express from 'express';
 import fetch from 'node-fetch';
 import isAuthed from '../isAuthed.js'
 const router=express.Router()
-
+//Visu atsakymu gavimas
 router.get('/', async function(req, res){
   const answers=await fetch('http://localhost:8080/answers').then(data=>data.json())
   res.json(answers)
  });
+ //Visu atsakymu gavimas
 
+ //Atsakymu gavimas pagal klausimo id
  router.get('/:question_id', async function(req, res){
   const answers=await fetch(`http://localhost:8080/answers/${req.params.question_id}`).then(data=>data.json())
   res.json(answers)
  });
+ //Atsakymu gavimas pagal klausimo id
 
+ 
+ 
+//Atsakymu POST
  router.post('/',isAuthed, async function(req, res){
   const addanswers=await 
   fetch(' http://localhost:8080/answers',{
@@ -26,5 +32,18 @@ router.get('/', async function(req, res){
   })
   res.send(addanswers)
  });
+//Atsakymu POST
+
+//Atsakymu DELETE
+router.delete('/delete/:id',isAuthed, async function(req,res){
+  const deleteanswer= await fetch(`http://localhost:8080/answers/${req.params.id}`, {
+ method: "DELETE"
+ 
+ })
+
+ res.send("Deleted")
+ })
+//Atsakymu DELETE
+
 
  export default router

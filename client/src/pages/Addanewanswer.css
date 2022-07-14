@@ -71,7 +71,7 @@ h4{
   margin-top: 50px;
   width: 1000px;
   border: 2px solid black;
-  height: 400px;
+  height: auto;
   display: flex;
   align-items:center;
   justify-content: center;
@@ -82,4 +82,17 @@ h4{
   margin-bottom: 50px;
   background-color: rgb(229, 247, 228);
   opacity: 0.8;
+}
+
+.deleteBtn{
+  text-align: center;
+  background-color: rgb(241, 178, 178);
+  margin-bottom: 25px;
+  height: 40px;
+  width: 80px;
+  border-radius: 5px;
+  font-size: 30px;
+}
+.deleteBtn:hover{
+  background-color: rgb(241, 83, 83);
 }

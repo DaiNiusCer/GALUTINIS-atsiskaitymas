@@ -4,7 +4,7 @@ import isAuthed from '../isAuthed.js';
 const router=express.Router()
 
 router.get('/', isAuthed, async function(req, res){
-  res.send({Message:'Everything is fine!'})
+  res.send({username: req.token.username,id: req.token.id})
  });
 
 
