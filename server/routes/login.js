@@ -29,7 +29,7 @@ if(!isMatch){
 })
 }
 
-const token=jwt.sign({id:user.id,email:user.email,nickname:user.nickname},'donottellyourmum')
+const token=jwt.sign({id:user.id,email:user.email},'donottellyourmum')
 res.json({token})
 })
 

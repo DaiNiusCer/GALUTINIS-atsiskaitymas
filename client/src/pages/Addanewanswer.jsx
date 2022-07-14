@@ -1,21 +1,40 @@
 import Headerhome from "../components/Headerhome";
 import Answerscard from "../components/Answerscard";
 import {useParams} from "react-router-dom";
-import {useState,useEffect} from 'react';
 import ReplyIcon from '@mui/icons-material/Reply';
 import { useNavigate } from "react-router-dom"; 
 import { Link } from "react-router-dom";
+import { useState,useEffect } from "react";
 import './Addanewanswer.css'
 
 
-const Addanewanswer = ({answersData,user}) => {
+const Addanewanswer = ({answersData}) => {
   const navigate=useNavigate()
   const {id}=useParams();
   const [answer,setAnswer]=useState([]);
   const[logedIn,setLogedIn]=useState(false);
   const[user,setUser]=useState({});
   //Papildoma autorizacija
-
+  useEffect(() => {
+    const token = localStorage.getItem('yoursToken');
+    fetch('/verify', {
+    headers: {
+    'Authorization': `Bearer ${token}`
+    }
+    })
+    .then(res => res.json())
+    .then(res => {
+    if (res.err) {
+      setLogedIn(false)
+    }
+    else{
+      setLogedIn(true)
+      setUser({id: res.id })
+      }
+    })
+},
+[navigate]
+)
   //Papildoma autorizacija
  
   //Atsakymu GET pagal ID
@@ -69,7 +88,7 @@ const deleteFunction=(question_id)=>{
     .then(()=> answersQuestionsId())
     .then(()=>alert("Deleted!"))
     
-  console.log(deleteFunction)
+  
   
 }
 //Atsakymu DELETE
@@ -82,7 +101,7 @@ const deleteFunction=(question_id)=>{
   <div className="answerAndForm">
     
   {
-    answer.map((item,i)=><Answerscard key={i} data={item} deleteFunction={deleteFunction}/>)
+    answer.map((item,i)=><Answerscard key={i} data={item} deleteFunction={deleteFunction} user={user}/>)
   }
 <form className="answerForm" onSubmit={addAnswer}>
 <h2>Enter a new answer here!</h2>

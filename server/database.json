@@ -60,6 +60,11 @@
       "user_id": 3,
       "question": "What type of accommodation you have?",
       "id": 7
+    },
+    {
+      "user_id": 2,
+      "question": "How old are you?",
+      "id": 8
     }
   ],
   "answers": [
@@ -89,12 +94,6 @@
     },
     {
       "user_id": 2,
-      "question_id": "2",
-      "answer": "About 50 cm from ground",
-      "id": 12
-    },
-    {
-      "user_id": 2,
       "question_id": "4",
       "answer": "Lets go for the beer, dude",
       "id": 13
@@ -118,10 +117,16 @@
       "id": 19
     },
     {
-      "user_id": 3,
-      "question_id": "1",
-      "answer": "What?",
-      "id": 20
+      "user_id": 2,
+      "question_id": "2",
+      "answer": "They are 1 meter tall",
+      "id": 21
+    },
+    {
+      "user_id": 4,
+      "question_id": "8",
+      "answer": "I'm in mid 40's",
+      "id": 22
     }
   ]
 }
