@@ -5,15 +5,18 @@ import { useNavigate } from "react-router-dom";
 
 
 
-const Home = ({q,}) => {
+const Home = ({q}) => {
   
   const navigate=useNavigate()
-    const[answers,setAnswers]=useState([])
+  const[answers,setAnswers]=useState([])
+  //Atsakymu GET
     const answersData=()=>{
       fetch('/answers')
       .then(res=>res.json())
       .then(data=>setAnswers(data))
     }
+  //Atsakymu GET
+
     //Autorizacijos efectas
     useEffect(() => {
       const token = localStorage.getItem('yoursToken');

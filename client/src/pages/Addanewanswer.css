@@ -84,6 +84,18 @@ h4{
   opacity: 0.8;
 }
 
+.deleteEditBtnField{
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+
+}
+.deleteEditBtnField_{
+  display: flex;
+align-items: center;
+justify-content: space-around;
+}
+
 .deleteBtn{
   text-align: center;
   background-color: rgb(241, 178, 178);
@@ -95,4 +107,18 @@ h4{
 }
 .deleteBtn:hover{
   background-color: rgb(241, 83, 83);
+}
+
+.editBtn{
+  background-color: rgb(241, 237, 178);
+  text-align: center;
+  margin-bottom: 25px;
+  height: 40px;
+  width: 80px;
+  border-radius: 5px;
+  font-size: 30px;
+}
+
+.editBtn:hover{
+  background-color: yellow;
 }

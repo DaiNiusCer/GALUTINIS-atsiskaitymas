@@ -127,6 +127,12 @@
       "question_id": "8",
       "answer": "I'm in mid 40's",
       "id": 22
+    },
+    {
+      "user_id": 3,
+      "question_id": "1",
+      "answer": "I have husky",
+      "id": 23
     }
   ]
 }
