@@ -65,7 +65,7 @@ const Header=(props)=> {
               >
                 <MenuItem sx={{backgroundColor:"rgb(190, 190, 190)",textAlign:"center"}}><Link to="/">Main</Link></MenuItem>
                 <MenuItem sx={{backgroundColor:"rgb(190, 190, 190)",textAlign:"center"}}><Link to="/contacts">Contacts</Link></MenuItem>
-                <MenuItem sx={{backgroundColor:"rgb(190, 190, 190)",textAlign:"center"}}><Link to="/about">About</Link></MenuItem>
+                <MenuItem sx={{backgroundColor:"rgb(190, 190, 190)",textAlign:"center"}}><Link to="/aboutus">About</Link></MenuItem>
               
               </Menu>
             </div>

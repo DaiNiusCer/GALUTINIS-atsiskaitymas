@@ -64,7 +64,7 @@ const Headerhome=(props)=> {
                 onClose={()=>setAnchorEl(null)}
               >
                 <MenuItem sx={{backgroundColor:"rgb(190, 190, 190)",textAlign:"center"}}><Link to="/home">Main</Link></MenuItem>
-                <MenuItem sx={{backgroundColor:"rgb(190, 190, 190)",textAlign:"center"}}><Link to="/contacts">Contacts</Link></MenuItem>
+                <MenuItem sx={{backgroundColor:"rgb(190, 190, 190)",textAlign:"center"}}><Link to="/contacts2">Contacts</Link></MenuItem>
                 <MenuItem sx={{backgroundColor:"rgb(190, 190, 190)",textAlign:"center"}}><Link to="/about">About</Link></MenuItem>
                 <MenuItem onClick={()=>logout()} sx={{backgroundColor:"rgb(190, 190, 190)",textAlign:"center"}}><Link to="/">Logout</Link></MenuItem>
               

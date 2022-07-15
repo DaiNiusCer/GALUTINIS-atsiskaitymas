@@ -55,6 +55,11 @@
       "user_id": 1,
       "question": "How old are you?",
       "id": 6
+    },
+    {
+      "user_id": 4,
+      "question": "Do you have a bike ?",
+      "id": 7
     }
   ],
   "answers": [

@@ -1,0 +1,34 @@
+
+  
+
+.containerContacts{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../../public/images/contacts.jpg")
+}
+
+h1{
+  color: white;
+  text-align: center;
+}
+
+.contacts{
+  color:white
+}
+
+.conatctsCard{
+  border: 1px solid black;
+  box-shadow: 6px 2px 15px -2px rgba(242, 247, 195, 0.68);
+  width: 900px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: black;
+  opacity: 0.7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+ margin-bottom: 100px;
+}

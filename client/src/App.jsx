@@ -8,6 +8,10 @@ import {useState,useEffect} from 'react';
 import './App.css';
 import Addanewanswer from './pages/Addanewanswer';
 import Askquestion from './pages/Askquestion';
+import Contacts from './pages/Contacts';
+import Contacts2 from './pages/Contacts2';
+import Aboutus from './pages/Aboutus';
+import Aboutus2 from './pages/Aboutus2';
 
 function App() {
   //Visi hooks pradžia
@@ -78,6 +82,10 @@ useEffect(()=>{
 <Route path="/home"element={<Home q={questions} questionsData={questionsData}/>}/>
 <Route path="/answers/:id"element={<Addanewanswer answersData={answers} questionsData={questionsData} user={user}/>}/>
 <Route path="/ask"element={<Askquestion questionsData={questionsData}/>}/>
+<Route path="/contacts"element={<Contacts/>}/>
+<Route path="/contacts2"element={<Contacts2/>}/>
+<Route path="/aboutus"element={<Aboutus/>}/>
+<Route path="/about"element={<Aboutus2/>}/>
 
 </Routes>
    </>
