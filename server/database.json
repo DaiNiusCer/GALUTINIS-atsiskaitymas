@@ -55,11 +55,6 @@
       "user_id": 1,
       "question": "How old are you?",
       "id": 6
-    },
-    {
-      "user_id": 4,
-      "question": "Do you have a bike ?",
-      "id": 7
     }
   ],
   "answers": [
@@ -128,12 +123,6 @@
       "question_id": "1",
       "answer": "I have husky",
       "id": 23
-    },
-    {
-      "user_id": 2,
-      "question_id": "1",
-      "answer": "I have a snake",
-      "id": 24
     }
   ]
 }
