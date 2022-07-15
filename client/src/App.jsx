@@ -75,7 +75,7 @@ useEffect(()=>{
 <Route path="/"element={<Main q={questions}/>}/>
 <Route path="/register"element={<Register/>}/>
 <Route path="/login"element={<Login/>}/>
-<Route path="/home"element={<Home q={questions}/>}/>
+<Route path="/home"element={<Home q={questions} questionsData={questionsData}/>}/>
 <Route path="/answers/:id"element={<Addanewanswer answersData={answers} questionsData={questionsData} user={user}/>}/>
 <Route path="/ask"element={<Askquestion questionsData={questionsData}/>}/>
 

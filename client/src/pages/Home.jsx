@@ -5,17 +5,18 @@ import { useNavigate } from "react-router-dom";
 
 
 
-const Home = ({q}) => {
+const Home = ({q,questionsData}) => {
   
   const navigate=useNavigate()
   const[answers,setAnswers]=useState([])
-  //Atsakymu GET
-    const answersData=()=>{
-      fetch('/answers')
-      .then(res=>res.json())
-      .then(data=>setAnswers(data))
-    }
-  //Atsakymu GET
+  const[logedIn,setLogedIn]=useState(false);
+  const[user,setUser]=useState({});
+ 
+  const answersData=()=>{
+    fetch('/answers')
+    .then(res=>res.json())
+    .then(data=>setAnswers(data))
+  }
 
     //Autorizacijos efectas
     useEffect(() => {
@@ -28,17 +29,39 @@ const Home = ({q}) => {
       .then(res => res.json())
       .then(res => {
       if (res.err) {
-      localStorage.removeItem('yoursToken');
-      return navigate('/');
+        localStorage.removeItem('yoursToken');
+        setLogedIn(false);
+        return navigate('/');
       }
-      }
-      )
-      }, 
-      [navigate])
-   //Autorizacijos efectas
-    useEffect(()=>{
+      else{
+        setLogedIn(true)
+        setUser({id: res.id })
+        }
+      })
       answersData()
-    },[])
+  },
+  [navigate]
+  )
+    
+   //Autorizacijos efectas
+//Klausimu DELETE
+const deleteFunction=(question_id)=>{
+  fetch(`/questions/delete/${question_id}`, {
+    method: "DELETE",
+    headers:{
+      "Authorization":`Bearer ${localStorage.getItem('yoursToken')}`
+    }
+    })
+   .then(()=>questionsData())
+    .then(()=>alert("Deleted!"))
+    
+  
+  
+}
+//Klausimu DELETE
+  
+
+
   return ( 
     <>
     <Headerhome/>
@@ -46,7 +69,7 @@ const Home = ({q}) => {
     <div className="allQuestions">
 <h1>See all blogs questions and answers</h1>
   {
-    q.map((item,i)=><Questioncard2 key={i} questions={item} answers={answers}/>)
+    q.map((question,i)=><Questioncard2 key={i} questions={question}  deleteFunction={deleteFunction} user={user}/>)
   }
 </div>
     </>

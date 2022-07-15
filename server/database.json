@@ -52,19 +52,9 @@
       "question": "What is yours favorite drink in summer?"
     },
     {
-      "id": 6,
-      "user_id": 3,
-      "question": "What car you have ?"
-    },
-    {
-      "user_id": 3,
-      "question": "What type of accommodation you have?",
-      "id": 7
-    },
-    {
-      "user_id": 2,
+      "user_id": 1,
       "question": "How old are you?",
-      "id": 8
+      "id": 6
     }
   ],
   "answers": [
@@ -133,6 +123,12 @@
       "question_id": "1",
       "answer": "I have husky",
       "id": 23
+    },
+    {
+      "user_id": 2,
+      "question_id": "1",
+      "answer": "I have a snake",
+      "id": 24
     }
   ]
 }

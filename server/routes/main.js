@@ -33,4 +33,15 @@ router.get('/', async function(req, res){
  });
  //Klausimu POST
 
+ //Klausimu DELETE
+ router.delete('/delete/:id',isAuthed, async function(req,res){
+  const deletequestion= await fetch(` http://localhost:8080/questions/${req.params.id}`, {
+ method: "DELETE"
+ 
+ })
+
+ res.send("Deleted")
+ })
+ //Klausimu DELETE
+
  export default router

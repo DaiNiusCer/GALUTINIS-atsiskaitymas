@@ -4,14 +4,15 @@ import { useNavigate } from 'react-router-dom';
 import DeleteIcon from '@mui/icons-material/Delete';
 import ModeEditIcon from '@mui/icons-material/ModeEdit';
 
-const Questioncard2 = ({questions,answers}) => {
-const{id,user_id,question_id,answer}=answers
-  const navigate=useNavigate()
- 
-const navigateClick=(id)=>{
 
-navigate(`/answers/${id}`)
-}
+const Questioncard2 = ({questions,deleteFunction,user}) => {
+
+  const navigate=useNavigate()
+  
+  const navigateClick=(id)=>{
+  navigate(`/answers/${id}`)
+  }
+ 
   return ( 
     <>
     <div className="allquestions">
@@ -20,7 +21,7 @@ navigate(`/answers/${id}`)
     <button onClick={()=>navigateClick(questions.id)} className='ansawerbtn'>See all answers</button>
     <br/>
     <div className="deleteEditBtnField">
-    <button className="deleteBtn" id={questions.id}> <DeleteIcon/></button>
+   {user.id==questions.user_id? <button className="deleteBtn" id={questions.id} onClick={()=>deleteFunction(questions.id)}><DeleteIcon/></button>:null}
     <button className="editBtn" id={questions.id}> < ModeEditIcon/></button>
     </div>
     

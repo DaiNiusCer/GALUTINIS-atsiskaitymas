@@ -4,7 +4,7 @@ import ModeEditIcon from '@mui/icons-material/ModeEdit';
 
 const Answerscard = ({data,deleteFunction,user}) => {
   const{id,user_id,question_id,answer}=data
-  console.log(user)
+
   return ( 
   <>
   
