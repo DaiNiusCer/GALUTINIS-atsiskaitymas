@@ -36,7 +36,7 @@ const Aboutus2 = () => {
     <>
     <Headerhome/>
     <div className="body">
-    <div class="tekstas">
+    <div className="tekstas">
      <br/>
     
       <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, ut.</h1>

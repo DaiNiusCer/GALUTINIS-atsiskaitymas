@@ -33,6 +33,7 @@ const Addanewanswer = ({answersData}) => {
       }
     })
     answersQuestionsId()
+    
   },
 [navigate]
 )

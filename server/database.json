@@ -23,6 +23,12 @@
       "email": "ilgas@ilgas.com",
       "password": "$2b$10$CPWDQFUoqTZM2hO8JPx2kO89lsMeB3oRETMQTKoiMqEBy0wiCyu7m",
       "id": 4
+    },
+    {
+      "nickname": "Katinas",
+      "email": "katinas@gmail.com",
+      "password": "$2b$10$9iTUbLgFAC/gl7MZM25Zlu.EbfyRD/fb7DWgNBA7vOQ66zRqLts5C",
+      "id": 5
     }
   ],
   "questions": [
@@ -45,6 +51,21 @@
       "user_id": 1,
       "question": "How old are you?",
       "id": 6
+    },
+    {
+      "user_id": 5,
+      "question": "What mouse you have ?",
+      "id": 7
+    },
+    {
+      "user_id": 5,
+      "question": "Do you like milk ?",
+      "id": 8
+    },
+    {
+      "user_id": 5,
+      "question": "Do you have your own place",
+      "id": 9
     }
   ],
   "answers": [
@@ -91,9 +112,9 @@
       "id": 23
     },
     {
-      "user_id": 2,
-      "question_id": "6",
-      "answer": "Audi 100",
+      "user_id": 5,
+      "question_id": "8",
+      "answer": "Yes",
       "id": 24
     }
   ]
