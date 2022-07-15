@@ -37,16 +37,6 @@
       "question": " What tall are cats?"
     },
     {
-      "id": 3,
-      "user_id": 2,
-      "question": "How many years live horses?"
-    },
-    {
-      "id": 4,
-      "user_id": 2,
-      "question": "What does fox say?"
-    },
-    {
       "id": 5,
       "user_id": 3,
       "question": "What is yours favorite drink in summer?"
@@ -83,24 +73,6 @@
       "id": 8
     },
     {
-      "user_id": 2,
-      "question_id": "4",
-      "answer": "Lets go for the beer, dude",
-      "id": 13
-    },
-    {
-      "user_id": 2,
-      "question_id": "5",
-      "answer": "Dark lager beer",
-      "id": 14
-    },
-    {
-      "user_id": 2,
-      "question_id": "6",
-      "answer": "BMW 730",
-      "id": 15
-    },
-    {
       "user_id": 3,
       "question_id": "7",
       "answer": "I have a house",
@@ -113,16 +85,16 @@
       "id": 21
     },
     {
-      "user_id": 4,
-      "question_id": "8",
-      "answer": "I'm in mid 40's",
-      "id": 22
-    },
-    {
       "user_id": 3,
       "question_id": "1",
       "answer": "I have husky",
       "id": 23
+    },
+    {
+      "user_id": 2,
+      "question_id": "6",
+      "answer": "Audi 100",
+      "id": 24
     }
   ]
 }

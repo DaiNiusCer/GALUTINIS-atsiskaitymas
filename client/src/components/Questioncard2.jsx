@@ -22,7 +22,7 @@ const Questioncard2 = ({questions,deleteFunction,user}) => {
     <br/>
     <div className="deleteEditBtnField">
    {user.id==questions.user_id? <button className="deleteBtn" id={questions.id} onClick={()=>deleteFunction(questions.id)}><DeleteIcon/></button>:null}
-    <button className="editBtn" id={questions.id}> < ModeEditIcon/></button>
+   {user.id==questions.user_id? <button className="editBtn" id={questions.id}> < ModeEditIcon/></button>:null}
     </div>
     
     </div>

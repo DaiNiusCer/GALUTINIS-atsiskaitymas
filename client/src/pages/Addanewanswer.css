@@ -122,3 +122,11 @@ justify-content: space-around;
 .editBtn:hover{
   background-color: yellow;
 }
+
+.editFormFieldShow{
+display: block;
+}
+
+.editFormField{
+  display: none;
+}

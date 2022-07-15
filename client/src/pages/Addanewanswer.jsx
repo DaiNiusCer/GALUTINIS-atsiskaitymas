@@ -32,7 +32,8 @@ const Addanewanswer = ({answersData}) => {
       setUser({id: res.id })
       }
     })
-},
+    answersQuestionsId()
+  },
 [navigate]
 )
   //Papildoma autorizacija
@@ -48,10 +49,7 @@ const Addanewanswer = ({answersData}) => {
     .catch(err => console.log(err))
     };
 
-    useEffect(()=>{
-      answersQuestionsId()
-     
-    },[])
+   
 //Atsakymu GET pagal ID
 
 //Atsakymu POST
