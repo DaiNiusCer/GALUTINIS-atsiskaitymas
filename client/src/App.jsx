@@ -12,6 +12,7 @@ import Contacts from './pages/Contacts';
 import Contacts2 from './pages/Contacts2';
 import Aboutus from './pages/Aboutus';
 import Aboutus2 from './pages/Aboutus2';
+import Footer from './components/Footer';
 
 function App() {
   //Visi hooks pradžia
@@ -88,6 +89,7 @@ useEffect(()=>{
 <Route path="/about"element={<Aboutus2/>}/>
 
 </Routes>
+<Footer/>
    </>
   );
 }

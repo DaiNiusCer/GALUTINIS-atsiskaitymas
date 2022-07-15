@@ -3,3 +3,13 @@
 body{
   font-family: 'Edu NSW ACT Foundation', cursive;
 }
+
+footer{
+  background-color:rgb(158,213,203);
+  box-shadow:6px 2px 15px -2px rgba(255,252,247,0.68);
+  height:80px;
+  display:flex;
+  align-items:center; 
+  justify-content:center;
+
+}
