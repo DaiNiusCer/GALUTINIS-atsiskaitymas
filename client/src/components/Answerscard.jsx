@@ -25,7 +25,8 @@ const updateFunction=(e)=>{
       
     })
     })
-   .then(()=>answersQuestionsId())
+    .then(()=>e.target.reset())
+    .then(()=>answersQuestionsId())
     .then(()=>alert("Your answer has been updated!"))
 
 }
