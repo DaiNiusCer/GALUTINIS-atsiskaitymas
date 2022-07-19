@@ -4,7 +4,7 @@ import ModeEditIcon from '@mui/icons-material/ModeEdit';
 
 const Answerscard = ({data,deleteFunction,user,answersQuestionsId}) => {
   const{id,user_id,question_id,answer}=data;
-  const[isActive,setIsActive]=useState(false)
+  const[isActive,setIsActive]=useState(false);
 
   const handleClick = () => {
      setIsActive(current => !current);
@@ -30,7 +30,6 @@ const updateFunction=(e)=>{
     .then(()=>alert("Your answer has been updated!"))
 
 }
-
 
 //Atsakymu PATCH
   return ( 

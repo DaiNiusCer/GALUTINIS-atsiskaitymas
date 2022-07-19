@@ -2,10 +2,12 @@ import React from 'react';
 import './Questioncard.css';
 
 
-const Questioncard = ({questions,answers}) => {
 
+const Questioncard = ({questions,answers}) => {
+  
 
   return ( 
+    
     <>
     <div className="allquestions">
    <p className='questionid'>Question ID:{questions.id}</p>

@@ -44,4 +44,19 @@ router.get('/', async function(req, res){
  })
  //Klausimu DELETE
 
+ //Klausimu PATCH
+router.patch('/:id',isAuthed, async function(req, res){
+  const editquestions=await 
+  fetch(`http://localhost:8080/questions/${req.params.id}`,{
+    method:'PATCH',
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({
+      question:req.body.question
+    })
+  })
+ 
+  res.send(editquestions)
+ });
+//Klausimu PATCH
+
  export default router

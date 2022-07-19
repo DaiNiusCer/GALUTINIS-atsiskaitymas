@@ -55,7 +55,7 @@ router.patch('/:id',isAuthed, async function(req, res){
       answer:req.body.answer
     })
   })
-  console.log(req.body)
+ 
   res.send(editanswers)
  });
 //Atsakymu PATCH

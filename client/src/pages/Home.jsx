@@ -11,12 +11,14 @@ const Home = ({q,questionsData}) => {
   const[answers,setAnswers]=useState([])
   const[logedIn,setLogedIn]=useState(false);
   const[user,setUser]=useState({});
+  
  
   const answersData=()=>{
     fetch('/answers')
     .then(res=>res.json())
     .then(data=>setAnswers(data))
   }
+  
 
     //Autorizacijos efectas
     useEffect(() => {
@@ -39,6 +41,8 @@ const Home = ({q,questionsData}) => {
         }
       })
       answersData()
+      questionsData()
+
   },
   [navigate]
   )
@@ -69,7 +73,7 @@ const deleteFunction=(question_id)=>{
     <div className="allQuestions">
 <h1>See all blogs questions and answers</h1>
   {
-    q.map((question,i)=><Questioncard2 key={i} questions={question}  deleteFunction={deleteFunction} user={user}/>)
+    q.map((question,i)=><Questioncard2 key={i} questions={question}  deleteFunction={deleteFunction} user={user} questionsData={questionsData}/>)
   }
 </div>
     </>

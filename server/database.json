@@ -120,14 +120,20 @@
     {
       "user_id": 2,
       "question_id": "1",
-      "answer": "I have chichuaha",
-      "id": 25
+      "answer": "I have labrador",
+      "id": 26
     },
     {
       "user_id": 2,
-      "question_id": "1",
-      "answer": "I have labrador",
-      "id": 26
+      "question_id": "11",
+      "answer": "NO",
+      "id": 27
+    },
+    {
+      "user_id": 2,
+      "question_id": "11",
+      "answer": "I hate cats",
+      "id": 28
     }
   ]
 }
