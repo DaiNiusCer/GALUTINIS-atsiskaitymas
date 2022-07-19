@@ -45,5 +45,19 @@ router.delete('/delete/:id',isAuthed, async function(req,res){
  })
 //Atsakymu DELETE
 
+//Atsakymu PATCH
+router.patch('/:id',isAuthed, async function(req, res){
+  const editanswers=await 
+  fetch(`http://localhost:8080/answers/${req.params.id}`,{
+    method:'PATCH',
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({
+      answer:req.body.answer
+    })
+  })
+  console.log(req.body)
+  res.send(editanswers)
+ });
+//Atsakymu PATCH
 
  export default router

@@ -2,15 +2,36 @@ import React, { useState } from "react";
 import DeleteIcon from '@mui/icons-material/Delete';
 import ModeEditIcon from '@mui/icons-material/ModeEdit';
 
-const Answerscard = ({data,deleteFunction,user}) => {
+const Answerscard = ({data,deleteFunction,user,answersQuestionsId}) => {
   const{id,user_id,question_id,answer}=data;
   const[isActive,setIsActive]=useState(false)
 
   const handleClick = () => {
-    console.log("edit!")
      setIsActive(current => !current);
 };
+//Atsakymu PATCH
+const updateFunction=(e)=>{
+  e.preventDefault();
+  const answer=e.target.elements.answerEdit.value
+  console.log(answer)
+  fetch(`/answers/${id}`, {
+    method: "PATCH",
+    headers:{
+      "Content-Type":"application/json",
+      "Authorization":`Bearer ${localStorage.getItem('yoursToken')}`
+    },
+    body:JSON.stringify({
+      answer:answer
+      
+    })
+    })
+   .then(()=>answersQuestionsId())
+    .then(()=>alert("Your answer has been updated!"))
 
+}
+
+
+//Atsakymu PATCH
   return ( 
   <>
   
@@ -24,9 +45,9 @@ const Answerscard = ({data,deleteFunction,user}) => {
 {user.id==user_id? <button className="editBtn" id={id} onClick={()=>handleClick()}> < ModeEditIcon/></button>:null}
  </div>
 <div className={isActive?`${"editFormFieldShow"}`:`${"editFormField"}`}>
-<form className="answerForm" >
+<form className="answerForm" onSubmit={updateFunction}>
 <h2>Edit Your's a answers here!</h2>
-<textarea type="text" name="answer" id="" cols="80" rows="15" required>
+<textarea type="text" name="answerEdit" id="" cols="80" rows="15" required>
 </textarea>
 <input className="answerBtn" type="submit" value="Edit !" />
 </form>

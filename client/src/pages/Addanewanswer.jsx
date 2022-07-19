@@ -9,6 +9,7 @@ import './Addanewanswer.css'
 
 
 const Addanewanswer = ({answersData}) => {
+  
   const navigate=useNavigate()
   const {id}=useParams();
   const [answer,setAnswer]=useState([]);
@@ -100,7 +101,7 @@ const deleteFunction=(question_id)=>{
   <div className="answerAndForm">
     
   {
-    answer.map((item,i)=><Answerscard key={i} data={item} deleteFunction={deleteFunction} user={user}/>)
+    answer.map((item,i)=><Answerscard key={i} data={item} deleteFunction={deleteFunction} user={user} answersQuestionsId={answersQuestionsId}/>)
   }
 <form className="answerForm" onSubmit={addAnswer}>
 <h2>Enter a new answer here!</h2>
